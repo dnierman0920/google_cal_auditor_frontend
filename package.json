@@ -1,0 +1,19 @@
+{
+  "name": "google_cal_auditor_frontend",
+  "version": "1.0.0",
+  "description": "Displays metrics from google calendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnierman0920/google_cal_auditor_frontend.git"
+  },
+  "author": "David Nierman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnierman0920/google_cal_auditor_frontend/issues"
+  },
+  "homepage": "https://github.com/dnierman0920/google_cal_auditor_frontend#readme"
+}
