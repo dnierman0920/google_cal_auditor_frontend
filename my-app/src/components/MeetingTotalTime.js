@@ -3,9 +3,8 @@ import getTimeInMeetings from '../api/calendar_metrics'
 
 
 const MeetingTotalTime = () => {
-    let timeInMeetingsJSON = getTimeInMeetings()
-    console.log("timeInMeetings: ", timeInMeetingsJSON)
 
+    // *******************   HOOKS   ******************* \\
     // create a hook for days
     const [days, setdays] = useState(null)
     // create a hook for hours
@@ -17,10 +16,10 @@ const MeetingTotalTime = () => {
         // use the axios call to pull total time spent in meetings
         getTimeInMeetings()
         .then((res)=> {
-            console.log("RESPONSE: ", res.data['Total Meeting Duration'])
-            setdays(res.data['Total_Meeting_Duration'].days)
-            sethours(res.data['Total_Meeting_Duration'].hours)
-            setminutes(res.data['Total_Meeting_Duration'].minutes)
+            console.log("RESPONSE: ", res.data['total_meeting_duration'])
+            setdays(res.data['total_meeting_duration'].days)
+            sethours(res.data['total_meeting_duration'].hours)
+            setminutes(res.data['total_meeting_duration'].minutes)
         })
 
         .catch((error) => {
@@ -28,6 +27,7 @@ const MeetingTotalTime = () => {
         })
     },[])
 
+    // *******************   LOADING RETURN   ******************* \\
     // while waiting for axios call to return show a loading sign instead
     if (!days || !hours || !minutes) {
         return(
@@ -43,6 +43,7 @@ const MeetingTotalTime = () => {
 
     }
 
+    // *******************   SUCCESSFUL RETURN   ******************* \\
     return(
         <>
             <h2>Total Time in Meetings Over Last 3 Months</h2>
