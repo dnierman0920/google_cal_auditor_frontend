@@ -1,12 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import MeetingTotalTime from './components/MeetingTotalTime';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
-  );
+    <>
+      <h1>Calendar Auditor Metrics</h1>
+      <MeetingTotalTime/>
+    </>
+  )
 }
 
 export default App;
