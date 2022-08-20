@@ -8,16 +8,13 @@ export const getTimeInMeetings= () => {
 	})
 }
 
-// export default getTimeInMeetings
 
 export const getMostMeetings= () => {
 	return axios({
 		method: 'GET',
-		url: apiUrl + '/time-in-meetings/'
+		url: apiUrl + '/most-meetings/'
 	})
 }
-
-// export default getMostMeetings
 
 export const getMostCommonAttendees= () => {
 	return axios({
@@ -26,4 +23,4 @@ export const getMostCommonAttendees= () => {
 	})
 }
 
-// export default getMostCommonAttendees getMostMeetings
+

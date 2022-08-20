@@ -1,7 +1,7 @@
 import './App.css';
 import MeetingTotalTime from './components/MeetingTotalTime';
 import MostCommonAttendees from './components/MostCommonAttendees';
-import MostMeetings from './components/MostCommonAttendees';
+import MostMeetings from './components/MostMeetings';
 
 const App = () => {
   return (
@@ -9,6 +9,7 @@ const App = () => {
       <h1>Calendar Auditor Metrics</h1>
       <MeetingTotalTime/>
       <MostCommonAttendees/>
+      <MostMeetings/>
     </>
   )
 }
