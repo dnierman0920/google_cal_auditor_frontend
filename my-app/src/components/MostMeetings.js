@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { getTimeInMeetings } from '../api/calendar_metrics'
+import getTimeInMeetings from '../api/calendar_metrics'
 
 
-const MeetingTotalTime = () => {
+const MostMeetings = () => {
 
     // *******************   HOOKS   ******************* \\
     // create a hook for days
@@ -12,6 +12,7 @@ const MeetingTotalTime = () => {
     // create a hook for minutes
     const [minutes, setminutes] = useState(null)
 
+    // *******************   AXIOS/API CALL PROMISE CHAIN   ******************* \\
     useEffect(()=> {
         // use the axios call to pull total time spent in meetings
         getTimeInMeetings()
@@ -43,7 +44,7 @@ const MeetingTotalTime = () => {
 
     }
 
-    // *******************    RETURN   ******************* \\
+    // *******************   SUCCESSFUL RETURN   ******************* \\
     return(
         <>
             <h2>Total Time in Meetings Over Last 3 Months</h2>
@@ -56,4 +57,4 @@ const MeetingTotalTime = () => {
     )  
 }
 
-export default MeetingTotalTime
+export default MostMeetings
